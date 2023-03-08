@@ -5,11 +5,14 @@ import java.io.PrintWriter;
 import jakarta.servlet.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
+import Mapping.*;
+import java.util.HashMap;
 
 
 
 public class FrontServlet extends HttpServlet {
-
+   
+   HashMap<String,Mapping> MappingUrls= new HashMap<String,Mapping>();
    public String getUrl(String url){
       String[] meth=url.split("/");
       return meth[2];
